@@ -26,9 +26,21 @@
             width: 100%; 
             margin-top: 20px; 
         }
+        .diagonal-background {
+  position: fixed;
+  top: -300px;
+  left: -100px;
+  width: 200%;
+  height: 100%;
+  background: pink;
+  transform: rotate(-20deg);
+  z-index: -2;
+  opacity: 0.2;
+  pointer-events: none;
+}
     /* Buttons */
         th, td { 
-            border: 1px solid #ff88cf; 
+            border: 1px solid #f89ed4; 
             padding: 8px; 
             text-align: left; 
         }
@@ -62,7 +74,7 @@
         button {
             padding: 6px 16px;
             border: none;
-            background: #ff69b4; 
+            background: #f888c0; 
             color: #fff;         
             border-radius: 3px;
             cursor: pointer;
@@ -119,6 +131,18 @@
         z-index: 2;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+    .book-banner {
+  border: 2px solid #444;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #eee;
+  color: #222;
+  text-align: center;
+  margin-top: 30px; /* adjust position */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
     .main-content {
         position: relative;
         z-index: 10;
@@ -143,8 +167,14 @@
 
 .image-marquee-track img {
       width: 130px;
-      height: auto;
+      height: fixed;
       margin: 0 10px;
+}
+.marquee-container {
+  position: fixed;
+  bottom: 100px; 
+  width: 100%;
+  z-index: -1;
 }
 
 @keyframes scrollMarquee {
@@ -166,7 +196,7 @@ function setBooksBorder() {
     const border = document.getElementById('booksBorderText');
     const w = container.offsetWidth;
     const h = container.offsetHeight;
-    const phrase = "I need books ";
+    const phrase = "I need books";
     const verticalPhrase = "I\nn\ne\ne\nd\nb\no\no\nk\ns\n";
     let top = repeatToLength(phrase, Math.floor(w / 10));
     let bottom = repeatToLength(phrase, Math.floor(w / 10));
@@ -199,7 +229,7 @@ window.addEventListener('DOMContentLoaded', setBooksBorder);
 
 <body>
         <div class="books-border-container">
-
+<div class="diagonal-background"></div>
    <div class="books-border-text" id="booksBorderText"></div>
             
         <div class="center-container">      
@@ -496,50 +526,50 @@ window.addEventListener('DOMContentLoaded', setBooksBorder);
 
 <div class="image-marquee">
 <div class="image-marquee-track">
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />   
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
-    <img src="https://i.imgur.com/ogOAaCY.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />   
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
+    <img src="https://i.imgur.com/WMROXEv.png" alt="Going insane" />
 
 </div>
 </div>
